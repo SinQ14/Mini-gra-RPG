@@ -14,7 +14,7 @@
 }
 class Program {
     public static Random random = new Random();
-    static (int zycie,int atak,int zloto) adminConsole()
+    static (int zycie,int atak,int zloto) AdminConsole()
     {
         Console.WriteLine();
         Console.WriteLine("--Console--");
@@ -27,7 +27,7 @@ class Program {
         Console.WriteLine("Nowe statystyki ustawione!");
         return (zycie,atak,zloto);
     }
-    static void wyswietlStatystyki(string imie, int zycie, int atak, int zloto)
+    static void WyswietlStatystyki(string imie, int zycie, int atak, int zloto)
     {
         //Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine();
@@ -37,7 +37,7 @@ class Program {
         Console.WriteLine($"Atak {atak}");
         Console.WriteLine($"Zloto {zloto}");
     }
-    static (string imie,int zycie, int atak, int zloto) tworzeniePostaci()
+    static (string imie,int zycie, int atak, int zloto) TworzeniePostaci()
     {
         Console.WriteLine();
         Console.WriteLine("--Tworzenie postaci--");
@@ -49,31 +49,52 @@ class Program {
         Console.WriteLine($"Twoja postac to: {imie}");
         return (imie, zycie, atak, zloto);
     }
-    static void enemyEncounter(string imie,int zycie,int atak,int zloto,string pNazwa,int pHp,int pAtk,int pDef)
+    static void EnemyEncounter(string imie,int zycie,int atak,int zloto,string pNazwa,int pHp,int pAtk,int pDef)
     {
         Console.WriteLine();
-        Potwor Potwor1 = new Potwor(pNazwa,random.Next(pHp - 2, pHp + 3),random.Next(pAtk - 1, pAtk + 2),random.Next(pDef - 1, pDef + 2));
+        Potwor potwor1 = new Potwor(pNazwa,random.Next(pHp - 2, pHp + 3),random.Next(pAtk - 1, pAtk + 2),random.Next(pDef - 1, pDef + 2));
 
-        Console.WriteLine($"Napotykasz na swojej drodze {Potwor1.Nazwa} o HP:{Potwor1.HP}, Ataku:{Potwor1.Atak} i Obronie:{Potwor1.Obrona}!");
+        Console.WriteLine($"Napotykasz na swojej drodze {potwor1.Nazwa} o HP:{potwor1.HP}, Ataku:{potwor1.Atak} i Obronie:{potwor1.Obrona}!");
         Console.WriteLine("Co zrobisz?");
 
         int ucieczka = 0;
-        while (Potwor1.HP > 0 || ucieczka == 1 )
+        while (potwor1.HP > 0 || ucieczka == 1 )
         {
             Console.WriteLine("1.Atakuj\n2.Leczenie\n3.Uciekaj");
             switch (Console.ReadKey().Key)
             {
                 case ConsoleKey.D1:
                     Console.WriteLine();
-                    Console.WriteLine("bruh");
+                    Console.WriteLine("bruh1");
+                    break;
+                case ConsoleKey.D2:
+                    Console.WriteLine();
+                    Console.WriteLine("bruh2");
+                    break;
+                case ConsoleKey.D3:
+                    Console.WriteLine();
+                    if (random.Next(1, 11) > 5)
+                    {
+                        ucieczka = 1;
+                        Console.WriteLine("Udalo ci sie uciec!");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nie udalo ci sie uciec! Walka nadal trwa");
+                        break;
+                    }
+                default:
+                    Console.WriteLine();
+                    Console.WriteLine("Podaj poprawny wybor!");
                     break;
             }
         }
 
     }
-    static void waitClearScreen()
+    static void WaitClearScreen()
     {
-        Console.Write("->");
+        Console.Write("> ");
         Console.ReadKey();
         Console.Clear();
     }
@@ -83,10 +104,10 @@ class Program {
         int zycie;
         int atak;
         int zloto;
-        (imie,zycie,atak,zloto)=tworzeniePostaci();
-        (zycie,atak,zloto)=adminConsole();
-        wyswietlStatystyki(imie,zycie,atak,zloto);
-        waitClearScreen();
-        enemyEncounter(imie,zycie,atak,zloto,"Goblin",10,5,3);
+        (imie,zycie,atak,zloto)=TworzeniePostaci();
+        (zycie,atak,zloto)=AdminConsole();
+        WyswietlStatystyki(imie,zycie,atak,zloto);
+        WaitClearScreen();
+        EnemyEncounter(imie,zycie,atak,zloto,"Goblin",10,5,3);
     }
 }
