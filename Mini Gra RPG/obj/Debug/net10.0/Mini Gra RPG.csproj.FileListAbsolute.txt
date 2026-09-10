@@ -1,0 +1,14 @@
+/home/sinq/RiderProjects/Mini Gra RPG/Mini Gra RPG/bin/Debug/net10.0/Mini Gra RPG
+/home/sinq/RiderProjects/Mini Gra RPG/Mini Gra RPG/bin/Debug/net10.0/Mini Gra RPG.deps.json
+/home/sinq/RiderProjects/Mini Gra RPG/Mini Gra RPG/bin/Debug/net10.0/Mini Gra RPG.runtimeconfig.json
+/home/sinq/RiderProjects/Mini Gra RPG/Mini Gra RPG/bin/Debug/net10.0/Mini Gra RPG.dll
+/home/sinq/RiderProjects/Mini Gra RPG/Mini Gra RPG/bin/Debug/net10.0/Mini Gra RPG.pdb
+/home/sinq/RiderProjects/Mini Gra RPG/Mini Gra RPG/obj/Debug/net10.0/Mini Gra RPG.GeneratedMSBuildEditorConfig.editorconfig
+/home/sinq/RiderProjects/Mini Gra RPG/Mini Gra RPG/obj/Debug/net10.0/Mini Gra RPG.AssemblyInfoInputs.cache
+/home/sinq/RiderProjects/Mini Gra RPG/Mini Gra RPG/obj/Debug/net10.0/Mini Gra RPG.AssemblyInfo.cs
+/home/sinq/RiderProjects/Mini Gra RPG/Mini Gra RPG/obj/Debug/net10.0/Mini Gra RPG.csproj.CoreCompileInputs.cache
+/home/sinq/RiderProjects/Mini Gra RPG/Mini Gra RPG/obj/Debug/net10.0/Mini Gra RPG.dll
+/home/sinq/RiderProjects/Mini Gra RPG/Mini Gra RPG/obj/Debug/net10.0/refint/Mini Gra RPG.dll
+/home/sinq/RiderProjects/Mini Gra RPG/Mini Gra RPG/obj/Debug/net10.0/Mini Gra RPG.pdb
+/home/sinq/RiderProjects/Mini Gra RPG/Mini Gra RPG/obj/Debug/net10.0/Mini Gra RPG.genruntimeconfig.cache
+/home/sinq/RiderProjects/Mini Gra RPG/Mini Gra RPG/obj/Debug/net10.0/ref/Mini Gra RPG.dll
