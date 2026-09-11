@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s/sy1h3I11A=",
+  "dgSpecHash": "DP+Gx6bYtkk=",
   "success": true,
-  "projectFilePath": "/home/sinq/RiderProjects/Mini Gra RPG/Mini Gra RPG/Mini Gra RPG.csproj",
-  "expectedPackageFiles": [
-    "/home/sinq/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.11/microsoft.aspnetcore.app.ref.10.0.11.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\4tb\\RiderProjects\\Mini-gra-RPG\\Mini Gra RPG\\Mini Gra RPG.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

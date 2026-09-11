@@ -65,7 +65,7 @@ class Program {
             {
                 case ConsoleKey.D1:
                     Console.WriteLine();
-                    Console.WriteLine("bruh1");
+                    Console.WriteLine("bruh11");
                     break;
                 case ConsoleKey.D2:
                     Console.WriteLine();
