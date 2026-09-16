@@ -51,7 +51,7 @@ class Program {
         Console.WriteLine($"Twoja postac to: {imie}");
         return (imie, zycie,maxzycie, atak, zloto);
     }
-    static (int zycie,int zloto) EnemyEncounter(string imie, int zycie,int maxzycie, int atak, int zloto,
+    static (int zycie,int zloto,int atak) EnemyEncounter(string imie, int zycie,int maxzycie, int atak, int zloto,
         string pNazwa, int pHp, int pAtk, int pDef)
     {
         Console.WriteLine();
@@ -127,11 +127,16 @@ class Program {
             Console.WriteLine();
             Console.WriteLine($"Pokonałeś {potwor1.Nazwa}!");
             int tempzloto = random.Next(10, 28);
-            Console.WriteLine($"Otrzymujesz {tempzloto}!");
+            Console.WriteLine($"Otrzymujesz {tempzloto} zlota!");
             zloto += tempzloto;
+            if (random.Next(1, 3) > 1)
+            {
+                atak += 1;
+                Console.WriteLine($"Otrzymujesz +{atak} do ataku!");
+            }
         }
 
-        return (zycie, zloto);
+        return (zycie, zloto,atak);
     }
 
     static void WaitClearScreen()
@@ -148,10 +153,11 @@ class Program {
         int atak;
         int zloto;
         (imie,zycie,maxzycie,atak,zloto)=TworzeniePostaci();
-        //(zycie,maxzycie,atak,zloto)=AdminConsole();
+        (zycie,maxzycie,atak,zloto)=AdminConsole();
         WyswietlStatystyki(imie,zycie,atak,zloto);
         WaitClearScreen();
-        (zycie,zloto)=EnemyEncounter(imie,zycie,maxzycie,atak,zloto,"Goblin",20,5,3);
+        (zycie,zloto,atak)=EnemyEncounter(imie,zycie,maxzycie,atak,zloto,"Goblin",20,5,3);
+        WyswietlStatystyki(imie,zycie,atak,zloto);
         Console.ReadKey();
     }
 }
