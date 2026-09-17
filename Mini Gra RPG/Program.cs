@@ -132,7 +132,7 @@ class Program {
             if (random.Next(1, 3) > 1)
             {
                 atak += 1;
-                Console.WriteLine($"Otrzymujesz +{atak} do ataku!");
+                Console.WriteLine("Otrzymujesz +1 do ataku!");
             }
         }
 
